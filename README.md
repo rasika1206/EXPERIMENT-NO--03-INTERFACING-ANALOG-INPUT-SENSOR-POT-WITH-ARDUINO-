@@ -67,7 +67,33 @@ CIRCUIT DIAGRAM
 
 
 **PROGRAM** 
- 
+ ```
+ developed by: Rasika.M
+registered number:212222230117
+
+int potPin = A5;
+int ledPin = 2;
+
+void setup ()
+{
+  pinMode (potPin, INPUT);
+  pinMode (ledPin, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop(){
+   int PotMeasure = analogRead(A5);
+  Serial.print("Sensor Value: ");
+  Serial.println(PotMeasure);
+  if (PotMeasure>=650)
+  {
+    digitalWrite(2, HIGH);
+  }
+  else
+    digitalWrite(2, LOW);
+}
+
+```
 
 
 
@@ -80,14 +106,17 @@ CIRCUIT DIAGRAM
 **
 **Simulation output:** 
 **
+BEFORE STIMULATION
+![output](before.png)
+
+AFTER STIMULATION
+![output](after.png)
 
 
-[My image](username.github.com/repository/img/image.jpg)
 
 
 
 
+RESULT: 
 
-
-
-**RESULT: ** Arduino uno analog input functioning is learned and interfaced with digital input switch .
+Arduino uno analog input functioning is learned and interfaced with digital input switch .
